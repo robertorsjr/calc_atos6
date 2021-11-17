@@ -4,19 +4,21 @@ import {styles} from "./styles";
 import {SwitchModeButton} from "../index";
 import {useDarkMode} from "../../hooks/useDarkMode";
 import {ResultHistory} from "../ResultHistory";
+import {formatValue} from "../../utils";
 
 type ResultsProps = {
-  result: string
+  result?: string
+  history?: string
 }
 
-export default function Results({result }: ResultsProps) {
+export default function Results({result, history }: ResultsProps) {
   const {isDarkMode} = useDarkMode()
-  const style = styles(isDarkMode)
+  const style = styles(result?.length || 0, isDarkMode )
   return (
     <View style={style.results}>
       <SwitchModeButton/>
-      <ResultHistory history={'2-2'}/>
-      <Text style={style.resultText}>{result}</Text>
+      <ResultHistory history={history}/>
+      <Text style={style.resultText}>{formatValue(result || '0')}</Text>
     </View>
   );
 }
