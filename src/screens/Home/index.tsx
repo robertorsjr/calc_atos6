@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {View} from 'react-native';
+import {Button, Results} from "../../components";
+import {styles} from "./styles";
+import {buttons} from "../../utils";
+import {useDarkMode} from "../../hooks/useDarkMode";
 
 export default function Home() {
-    return (
-        <View style={styles.container}>
-            <Text>Hello World</Text>
-            <StatusBar style="auto" />
-        </View>
-    );
-}
+  const { isDarkMode } = useDarkMode()
+  const style = styles(isDarkMode)
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+  return (
+    <View style={style.container}>
+      <Results result={'2 + 2 = 4'}/>
+      <View style={style.buttons}>
+        {buttons.map(button=>(
+          <Button key={button} value={button}/>
+        ))}
+      </View>
+    </View>
+  );
+}
