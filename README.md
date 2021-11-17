@@ -6,6 +6,9 @@
 Uma simples calculadora.
 
 
+## Link Snack expo:  https://snack.expo.dev/@robertorsjr/github.com-robertorsjr-calc_atos6
+
+
 ## Requisitos
 
 :heavy_check_mark: Utilizar Expo.
@@ -25,7 +28,6 @@ Uma simples calculadora.
 :heavy_check_mark: Separar os dígitos com .(ponto): 123.456.789  
 
 :heavy_check_mark: Reduzir o tamanho da fonte do mostrador de acordo que o número for crescendo para caber na tela.
-
 
 
 ## Como rodar a aplicação
