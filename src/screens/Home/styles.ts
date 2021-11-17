@@ -6,7 +6,7 @@ export const styles = (isDarkMode?: boolean) => StyleSheet.create({
     backgroundColor: isDarkMode ? Colors.background : Colors.white,
     alignItems: 'center',
     justifyContent: 'space-between',
-    flex: 1
+    flex: 1,
   },
   buttons: {
     maxWidth: '90%',
@@ -14,6 +14,5 @@ export const styles = (isDarkMode?: boolean) => StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: "space-around",
-    flex: 1
   }
 });

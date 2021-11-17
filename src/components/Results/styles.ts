@@ -7,6 +7,7 @@ export const styles = (resultLength: number, isDarkMode?: boolean ) => StyleShee
     minHeight: 280,
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
+    flex:1
   },
   resultText:{
     margin: 10,

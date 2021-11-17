@@ -5,7 +5,7 @@ export const styles = (isDarkMode?: boolean) => StyleSheet.create({
   switchMode: {
     alignSelf: 'flex-start',
     position: "absolute",
-    bottom: 150,
+    top: 20,
     margin: 15,
     backgroundColor: isDarkMode ? Colors.lightTheme : Colors.blackTheme,
     alignItems: 'center',
